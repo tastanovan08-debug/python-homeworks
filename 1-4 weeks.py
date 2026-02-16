@@ -22,4 +22,19 @@ def analyze_text(text):
     text3 = text2.split()
 
 
+#1(dict and set)
+def invert_unique(d):
+    res = {}
+    for key, value in d.items():
+        if value not in res:
+            res[value] = []
+        if key not in res[value]:
+            res[value].append(key)
+    return res
+d1 = {"a" : 1, "b" : 2, "c" : 1, "d" : 3}
+print(invert_unique(d1))
 
+#2
+filter_numbers = lambda nums: {
+    num for num in nums
+    if num >

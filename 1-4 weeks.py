@@ -35,6 +35,26 @@ d1 = {"a" : 1, "b" : 2, "c" : 1, "d" : 3}
 print(invert_unique(d1))
 
 #2
+def calculate_average(nums):
+    if not nums:
+        return 0
+    total = 0
+    count = 0
+    for num in nums:
+        total += num
+        count += 1
+    return total / count
+
 filter_numbers = lambda nums: {
     num for num in nums
-    if num >
+    if num > calculate_average(nums)
+    and num % 2 != 0
+    and num % 5 != 0
+}
+
+s1 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+print(filter_numbers(s1))
+
+#3
+def merge_dicts_sum(d1, d2):
+    res = {}

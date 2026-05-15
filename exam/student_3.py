@@ -236,9 +236,6 @@ plt.savefig(OUTPUT + 'student3_countplot_treatment_type.png', dpi=150)
 plt.close()
 print("✅ Сохранено: student3_countplot_treatment_type.png")
 
-
-
-
 # Boxplot Treatment_Efficiency по Department
 fig, ax = plt.subplots(figsize=(12, 6))
 dept_order = df.groupby('Department')['Treatment_Efficiency'].median().sort_values(ascending=False).index
